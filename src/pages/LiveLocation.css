@@ -1,0 +1,112 @@
+.live-location-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.live-location-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 50px rgba(90, 14, 34, 0.12);
+  text-align: center;
+}
+
+.location-logo {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--primary-burgundy);
+  display: inline-block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.location-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.live-location-card h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.live-location-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.location-button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--primary-burgundy) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(126, 25, 51, 0.25);
+  transition: all 0.2s;
+}
+
+.location-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(126, 25, 51, 0.35);
+}
+
+.location-result {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(250, 246, 242, 0.9);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 16px;
+  text-align: left;
+}
+
+.location-result h2 {
+  font-size: 1.05rem;
+  color: #059669;
+  margin-bottom: 8px;
+}
+
+.location-result p {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.continue-button {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  background: var(--primary-burgundy);
+  color: #fff;
+  padding: 10px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.location-error {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}

@@ -1,0 +1,130 @@
+.add-prop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 15, 22, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.add-prop-card {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 28px 32px;
+  box-shadow: 0 25px 60px rgba(90, 14, 34, 0.2);
+}
+
+.add-prop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.add-prop-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(126, 25, 51, 0.08);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.add-prop-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.add-prop-header p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.status-msg-banner {
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-msg-banner.success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.add-prop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-item label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  width: 100%;
+  padding: 11px 14px;
+  background: rgba(250, 246, 242, 0.8);
+  border: 1px solid rgba(126, 25, 51, 0.14);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  background: #fff;
+  border-color: var(--primary-burgundy);
+  box-shadow: 0 0 0 3px rgba(126, 25, 51, 0.1);
+}
+
+.form-actions-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-two {
+    grid-template-columns: 1fr;
+  }
+}

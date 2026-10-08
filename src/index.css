@@ -1,0 +1,283 @@
+/* =============================================================
+   STAYFINDER — Premium Glassmorphism Design System
+   Glasses Theme · Dark Overlays · Burgundy Accents
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* === Core Brand Colors === */
+  --primary-burgundy: #7E1933;
+  --primary-dark: #5A0E22;
+  --primary-light: #9B2342;
+  --primary-glow: rgba(126, 25, 51, 0.18);
+  --primary-soft: rgba(126, 25, 51, 0.08);
+  --primary-mid: rgba(126, 25, 51, 0.12);
+
+  /* === Accent Colors === */
+  --accent-gold: #D97706;
+  --accent-gold-light: #F59E0B;
+  --accent-green: #10B981;
+  --accent-green-bg: rgba(16, 185, 129, 0.12);
+  --accent-blue: #3B82F6;
+
+  /* === Background Palette === */
+  --bg-cream: #FAF6F0;
+  --bg-sand: #F5EFEB;
+  --bg-warm: #F8F1EA;
+  --bg-card: rgba(255, 255, 255, 0.82);
+  --bg-card-hover: rgba(255, 255, 255, 0.96);
+
+  /* === Glass System === */
+  --glass-surface: rgba(255, 255, 255, 0.78);
+  --glass-surface-dark: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-dark: rgba(255, 255, 255, 0.22);
+  --glass-shadow: 0 12px 40px -4px rgba(90, 14, 34, 0.08), 0 4px 16px -2px rgba(0, 0, 0, 0.04);
+  --glass-shadow-hover: 0 24px 55px -4px rgba(90, 14, 34, 0.14), 0 8px 24px -2px rgba(0, 0, 0, 0.07);
+  --glass-shadow-deep: 0 32px 80px -8px rgba(10, 6, 12, 0.4), 0 12px 32px -4px rgba(0, 0, 0, 0.2);
+
+  /* === Typography === */
+  --text-main: #1F1B1D;
+  --text-muted: #6B6265;
+  --text-light: #948A8D;
+  --text-white: #ffffff;
+  --text-white-muted: rgba(255, 255, 255, 0.82);
+
+  /* === Fonts === */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* === Transitions === */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-mid: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* === Border Radius === */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+}
+
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-cream);
+  background-image: 
+    radial-gradient(ellipse at 0% 0%, rgba(126, 25, 51, 0.06) 0px, transparent 55%),
+    radial-gradient(ellipse at 100% 8%, rgba(224, 83, 68, 0.04) 0px, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(126, 25, 51, 0.05) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.56;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+}
+
+/* ===================== GLASSMORPHISM UTILITIES ===================== */
+
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-mid), transform var(--transition-mid);
+}
+
+.glass-panel:hover {
+  box-shadow: var(--glass-shadow-hover);
+}
+
+.glass-dark {
+  background: rgba(15, 10, 18, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-lg);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================== BUTTON SYSTEM ===================== */
+
+.pill-btn-burgundy {
+  background: linear-gradient(135deg, var(--primary-burgundy) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 11px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-mid);
+  box-shadow: 0 4px 18px rgba(126, 25, 51, 0.28), 0 1px 4px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pill-btn-burgundy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+  transition: left 0.55s ease;
+}
+
+.pill-btn-burgundy:hover::before {
+  left: 100%;
+}
+
+.pill-btn-burgundy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(126, 25, 51, 0.42), 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-burgundy) 100%);
+}
+
+.pill-btn-burgundy:active {
+  transform: translateY(0px);
+}
+
+.pill-btn-outline {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--primary-burgundy);
+  border: 1.5px solid rgba(126, 25, 51, 0.22);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-mid);
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.pill-btn-outline:hover {
+  background: rgba(126, 25, 51, 0.06);
+  border-color: var(--primary-burgundy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(126, 25, 51, 0.12);
+}
+
+/* ===================== SCROLLBAR ===================== */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0eae4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5c5bc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-burgundy);
+}
+
+/* ===================== SELECTION ===================== */
+::selection {
+  background: rgba(126, 25, 51, 0.18);
+  color: var(--primary-dark);
+}
+
+/* ===================== FOCUS RING ===================== */
+:focus-visible {
+  outline: 2px solid var(--primary-burgundy);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===================== ANIMATION KEYFRAMES ===================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(126, 25, 51, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(126, 25, 51, 0.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

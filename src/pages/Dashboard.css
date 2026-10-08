@@ -1,0 +1,263 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  width: 100%;
+}
+
+.dashboard-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dash-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dash-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-burgundy) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(126, 25, 51, 0.25);
+}
+
+.dash-greeting {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.dash-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.dash-stats-row {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 10px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-burgundy);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dash-section {
+  margin-bottom: 40px;
+}
+
+.section-head-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-head-bar h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-main);
+}
+
+.dash-link {
+  color: var(--primary-burgundy);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link-text-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary-burgundy);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.empty-favorites-box {
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.empty-icon {
+  font-size: 2.2rem;
+}
+
+.empty-favorites-box h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+}
+
+.empty-favorites-box p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.dash-props-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.dash-card {
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s;
+}
+
+.dash-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(90, 14, 34, 0.1);
+}
+
+.dash-card-media {
+  position: relative;
+  height: 170px;
+}
+
+.dash-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dash-badge-verified {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(16, 185, 129, 0.95);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.dash-match-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(126, 25, 51, 0.92);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.dash-remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.dash-card-info {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dash-meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.type-lbl {
+  font-size: 0.74rem;
+  color: var(--primary-burgundy);
+  font-weight: 700;
+}
+
+.star-lbl {
+  font-size: 0.78rem;
+  color: #b45309;
+  font-weight: 700;
+}
+
+.dash-card-info h4 {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.loc-p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.dash-bottom-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(126, 25, 51, 0.08);
+  padding-top: 10px;
+}
+
+.dash-bottom-row strong {
+  color: var(--primary-burgundy);
+  font-size: 1.1rem;
+}
+
+.mini-btn {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+}

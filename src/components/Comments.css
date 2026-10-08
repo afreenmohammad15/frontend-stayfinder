@@ -1,0 +1,163 @@
+.glass-comments-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comments-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.comment-card-glass {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(90, 14, 34, 0.04);
+}
+
+.comment-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.user-avatar-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.user-meta-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-and-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-and-tag strong {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.resident-pill {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.rating-date-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+
+.stars-row {
+  color: #F59E0B;
+  letter-spacing: 1px;
+}
+
+.dot-sep {
+  color: var(--text-light);
+}
+
+.comment-date-text {
+  color: var(--text-muted);
+}
+
+.comment-message-body {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Add Comment Form */
+.glass-comment-form {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(126, 25, 51, 0.12);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.form-header-line h4 {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.rating-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.rating-select-wrap select {
+  background: rgba(250, 246, 242, 0.8);
+  border: 1px solid rgba(126, 25, 51, 0.15);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.glass-input-field,
+.glass-textarea-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(250, 246, 242, 0.7);
+  border: 1px solid rgba(126, 25, 51, 0.12);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.glass-input-field:focus,
+.glass-textarea-field:focus {
+  background: #fff;
+  border-color: var(--primary-burgundy);
+  box-shadow: 0 0 0 3px rgba(126, 25, 51, 0.1);
+}
+
+.glass-textarea-field {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-review-btn {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+}

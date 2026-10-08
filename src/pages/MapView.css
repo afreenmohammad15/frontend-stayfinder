@@ -1,0 +1,191 @@
+.map-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.max-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.map-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.map-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.map-header-bar h1 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.map-header-bar p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.map-actions-top {
+  display: flex;
+  gap: 10px;
+}
+
+.map-main-layout {
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+.map-canvas-card {
+  height: 70vh;
+  min-height: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 45px rgba(90, 14, 34, 0.12);
+}
+
+.map-surface {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.map-loading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+}
+
+.map-popup-card {
+  width: 220px;
+}
+
+.map-popup-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.map-popup-card h4 {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.pop-loc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.pop-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.pop-rent {
+  color: var(--primary-burgundy);
+  font-size: 0.95rem;
+}
+
+.pop-rating {
+  font-size: 0.8rem;
+  color: #B45309;
+  font-weight: 700;
+}
+
+.popup-actions-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pop-btn-gmaps {
+  flex: 1;
+  display: block;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a73e8;
+  border: 1px solid rgba(26, 115, 232, 0.4);
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.pop-btn-gmaps:hover {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.pop-btn {
+  flex: 1;
+  display: block;
+  text-align: center;
+  background: var(--primary-burgundy);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* Map Mode Switcher */
+.map-mode-toggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(126, 25, 51, 0.15);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 4px;
+}
+
+.mode-toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-toggle-btn.active {
+  background: var(--primary-burgundy);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(126, 25, 51, 0.25);
+}
+
+.gmaps-embed-container {
+  width: 100%;
+  height: 100%;
+}
